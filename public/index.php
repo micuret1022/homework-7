@@ -13,7 +13,27 @@ use app\controllers\PostController;
 
 $url = $_SERVER["REQUEST_URI"];
 
-//todo add a switch statement router to route based on the url
-//if it is "/posts" return an array of posts via the post controller
-//if it is "/" return the homepage view from the main controller
-//if it is something else return a 404 view from the main controller
+//test comment 
+
+
+$path = parse_url($url, PHP_URL_PATH);
+
+$mainController = new MainController();
+$postController = new PostController();
+$userController = new UserController();
+
+switch ($path) {
+  case "/":
+    $mainController -> homepage();
+    break;
+  case "/posts":
+    $postController -> getPost();
+    echo json_encode($posts);
+    break;
+  default:
+    $mainController -> notFound();
+    break;
+}
+
+
+?>
