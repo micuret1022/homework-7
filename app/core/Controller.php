@@ -2,6 +2,9 @@
 
 namespace app\core;
 
+use Twig\Environment;
+use Twig\Loader\FilesystemLoader;
+
 class Controller
 {
     function __construct()

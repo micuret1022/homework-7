@@ -9,6 +9,7 @@ require_once "../app/controllers/PostController.php";
 use app\controllers\MainController;
 use app\controllers\UserController;
 use app\controllers\PostController;
+use app\models\Post;
 
 
 $url = $_SERVER["REQUEST_URI"];
@@ -19,21 +20,26 @@ $url = $_SERVER["REQUEST_URI"];
 $path = parse_url($url, PHP_URL_PATH);
 
 $mainController = new MainController();
+$postModel = new Post();
 $postController = new PostController();
 $userController = new UserController();
 
-switch ($path) {
-  case "/":
-    $mainController -> homepage();
-    break;
-  case "/posts":
-    $postController -> getPost();
-    echo json_encode($posts);
-    break;
-  default:
-    $mainController -> notFound();
-    break;
-}
 
+switch ($path) {
+    case "/":
+        $mainController -> homepage();
+        break;
+    case "/posts":
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $postData = $_POST;
+            $postController->createPost($postData);
+        } else {
+            $postController -> getPost();
+        }
+        break;
+    default:
+        $mainController -> notFound();
+        break;
+}
 
 ?>

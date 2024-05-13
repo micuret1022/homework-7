@@ -15,5 +15,17 @@
             </li>
         {% endfor %}
     </ul>
+
+{#homework 8#}
+    <h2>Add New Post</h2>
+    <form method="post" action="/posts">
+        <label for="postName">Name:</label><br>
+        <input type="text" id="postName" name="postName"><br>
+        <label for="postDescription">Description:</label><br>
+        <textarea id="postDescription" name="postDescription"></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+
+
 </body>
 </html>
