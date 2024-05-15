@@ -1,0 +1,26 @@
+#1. What are some examples of how PHP and JavaScript are alike and how they differ?
+
+There are many similarities between PHP and JavaScript. Both languages use similar
+operators, control structures, and data types. PHP and JS are also both interpreted
+languages, meaning their code is executed directly, without a prior step. Both languages
+also treat functions like they're first-class citizens, meaning that functions can be
+assigned to variables, passed as arguments to other functions, and returned from functions.
+On the other hand there are also differences between PHP and JS. JavaScript is a client-side
+language, meaning that it runs in the browser, directly manipulates the DOM (Document Object Model)
+and enabling interactive web pages. PHP on the other had is a server-side scripting language, meaning
+it is executed on the server and generates HTML [or other outputs] to the client.
+
+
+2. Define MVC, what are the responsibilities of each piece?
+
+MVC is a software design pattern that is commonly used for developing UIs that divides the program
+logic into 3 interconnected elements. The 3 elements are Model, View, and Controller. The Model represents
+the data and business logic of the application. It manages the data, logic, and rules of the application. It
+has no direct knowledge of the view or the controllers. Some of its responsibilities include: data storage and
+retrieval, data validation, business logic, and notifications of changes in the data. The View represents the
+presentation layer or the UI. It displays data from the model to the user and send user commands to the controller.
+Some of its responsibilities include: displaying data to the user, generating output representations of data, and
+sending user input to the controller. The Controller acts as an intermediary between the model and the view. It
+listens to user input, through views, and performs interactions on the data model objects. Some of its responsibilities
+include: receiving input, validating input, processing user commands, and determining the next output to present
+[possibly by changing the view].

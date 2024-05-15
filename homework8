@@ -1,0 +1,46 @@
+1. What does it mean to escape data? How does escaping data help us avoid malicious code?
+Escaping data refers to the process of encoding user input before using it in an application.
+This helps prevent malicious code injection attacks such as SQL injection or Cross-Site Scripting
+(XSS). By escaping data, special characters that could potentially be interpreted as SQLi are
+converted into their harmless representations, ensuring that the input is treated as data rather
+than executable code.
+
+
+2a. What is REST? What is meant by Statelessness?
+REST stands for Representational State Transfer. It is an architectural style for designing
+networked applications, particularly web services. Statelessness means that the server does
+not need to know anything about what state the client is in and vice versa. both the server
+and the client can understand any message received, even without seeing previous messages.
+
+
+2b. What is a resource?
+In the context of REST, a resource is any information that can be named or addressed. It can
+be a physical object, a conceptual entity, or a piece of data. Resources are identified by URIs
+(Uniform Resource Identifiers) and manipulated through representations, typically in the form of
+JSON or XML.
+
+
+2c. In a RESTful architecture paradigm what would be the proper way to create a path for: (provide URL and HTTP method):
+    i. getting a list of users?
+    URL: /users
+    HTTP Method: GET
+
+    ii. getting a particular
+    URL: `/users/{userId}`
+    HTTP Method: GET
+
+
+3. What is a Cookie?
+A cookie is a small file of information that a web server generates and sends to a web browser.
+The browser may store it and send it back with subsequent requests to the same server. Cookies
+are often used to remember information about the user, such as login credentials or preferences,
+and to track the user's browsing activity.
+
+
+4. What is a Session?
+A session is a group of user interactions with your website that take place within a given time frame.
+Sessions are typically managed using session identifiers, which are often stored in cookies. When a user
+requests the server, the server uses the session identifier to retrieve the corresponding session data,
+allowing the application to maintain stateful behavior across multiple requests.
+
+
